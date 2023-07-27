@@ -1,0 +1,7 @@
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/master.xml
+  application:
+    name: employee-service
+  config:
+    import: "optional:configserver:http://localhost:8088"
