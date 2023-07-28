@@ -1,0 +1,21 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <property name="seq_max_value" value="99999999999999"/>
+    <property name="seq_increment_by" value="1"/>
+    <changeSet author="rubachj" id="create_contact_data_sequence">
+        <createSequence incrementBy="${seq_increment_by}" maxValue="${seq_max_value}"
+                        sequenceName="SEQ_CONTACT_DATA" startValue="${seq_increment_by}"/>
+    </changeSet>
+    <changeSet author="rubachj" id="create_contact_data">
+        <createTable tableName="CONTACT_DATA">
+            <column name="ID" type="NUMBER(8,0)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(255)"/>
+            <column name="SURNAME" type="VARCHAR2(255)"/>
+            <column name="EMAIL" type="VARCHAR2(255)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR2(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

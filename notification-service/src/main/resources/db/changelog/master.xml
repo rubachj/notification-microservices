@@ -2,4 +2,5 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
     <include file="classpath:/db/changelog/initial/20230727_create_notification_table_and_sequence.xml"/>
+    <include file="classpath:/db/changelog/initial/20230728_create_contact_data_table_and_sequence.xml"/>
 </databaseChangeLog>
